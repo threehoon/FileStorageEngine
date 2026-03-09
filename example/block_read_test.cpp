@@ -5,11 +5,11 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-#include "include/common.h"
-#include "include/mmap_file.h"
-#include "include/file_op.h"
-#include "include/mmap_file_op.h"
-#include "include/index_handle.h"
+#include "common.h"
+#include "mmap_file.h"
+#include "file_op.h"
+#include "mmap_file_op.h"
+#include "index_handle.h"
 
 using namespace tfs;
 using namespace largefile;
@@ -102,7 +102,7 @@ int main(int, char**){
 
     fileOP->close_file();
     index_handle->flush();
-    index_handle->remove(block_id);
+    // index_handle->remove(block_id);
 
     delete index_handle;
     delete fileOP;

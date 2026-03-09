@@ -35,8 +35,10 @@ namespace tfs{
         /*
             这里是索引文件和块文件生成的路径
         */
-        static const std::string MAINBLOCK_DIR_PREFIX = "/home/wu/Document/TFS_FileStorageEngline/path/mainblock/";  // 主块文件的前缀
-        static const std::string INDEX_DIR_PREFIX = "/home/wu/Document/TFS_FileStorageEngine/path/index/";           // 索引文件的前缀
+        static const std::string MAINBLOCK_DIR_PREFIX = "/home/hoon/分布式核心存储引擎/src/FileStorageEngine/path/mainblock/";  // 主块文件的前缀
+
+        static const std::string INDEX_DIR_PREFIX = "/home/hoon/分布式核心存储引擎/src/FileStorageEngine/path/index/";           // 索引文件的前缀
+
         static const mode_t DIR_MODE = 0755;   // 文件操作权限
     
         // 记录块信息
@@ -154,7 +156,7 @@ namespace tfs{
 
             uint64_t file_id_;          // 文件编号
             
-            struct Location{           
+            struct Location{       //记录文件在block里的位置     
                 int32_t inner_offset_;  // 小文件在块文件内部的偏移量
                 int32_t size_;          // 小文件的大小
             }location_;                 // 声明结构体的同时 ，创建一个实例

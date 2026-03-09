@@ -142,7 +142,7 @@ int main(int, char**){
               << ". all file size: " << index_handle->get_block_info()->size_ << std::endl;
 
     fileOP->close_file();
-    index_handle->remove(block_id);
+    // index_handle->remove(block_id);
 
     delete index_handle;
     delete fileOP;

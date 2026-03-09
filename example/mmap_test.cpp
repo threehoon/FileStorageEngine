@@ -3,7 +3,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-#include "include/mmap_file.h"
+#include "mmap_file.h"
 
 
 using namespace tfs;
@@ -14,7 +14,7 @@ static struct MMapOption mmap_option = { 1024000 , 4096 ,4096 } ;
 // 文件映射操作类
 int main( int, char** ){
 
-    std::string fileName = "/home/wu/Decument/TFS_FileStorageEngine/path/CodeTest.txt";
+    std::string fileName = "/home/wu/Decument/FileStorageEngine/path/CodeTest.txt";
     int fd = open( fileName.c_str() , O_RDWR | O_CREAT | O_LARGEFILE );
     if( fd <0 ){
         std::cout<<"file open failed\n";

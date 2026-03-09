@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/TFS_FileStorageEngine.dir/src/file_op.cpp.o CMakeFiles/TFS_FileStorageEngine.dir/src/index_handle.cpp.o CMakeFiles/TFS_FileStorageEngine.dir/src/main.cpp.o CMakeFiles/TFS_FileStorageEngine.dir/src/mmap_file.cpp.o CMakeFiles/TFS_FileStorageEngine.dir/src/mmap_file_op.cpp.o  -o TFS_FileStorageEngine 

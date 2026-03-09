@@ -4,16 +4,17 @@ static const int debug = 1;
 
 namespace tfs{
     namespace largefile{
-
+        
         IndexHandle::IndexHandle( const std::string  &base_path, const uint32_t main_block_id ){
             // 创建文件映射操作类
             std::stringstream tmp_stream;
-            //tmp_stream<<base_path<<INDEX_DIR_PREFIX<<main_block_id;         // /root/wu/index/1
-            tmp_stream<<INDEX_DIR_PREFIX<< base_path <<"/"<< main_block_id;   // /home/wu/Document/TFS_FileStorageEngine/path/index/base_path/main_block_id
-            std::string index_path ;
-            tmp_stream >> index_path ;
+            // tmp_stream<<base_path<<INDEX_DIR_PREFIX<<main_block_id;       // /root/wu/index/1
+            tmp_stream<<INDEX_DIR_PREFIX<< base_path <<"/"<< main_block_id; // /home/wu/Document/FileStorageEngine/path/index/base_path/main_block_id
+            std::string index_path;
+            tmp_stream >> index_path;
             if( debug )
                 std::cout << "index file path:" << index_path << std::endl;
+                
             mmap_file_op_ = new MMapFileOperation(index_path); // 创建一个映射文件操作类
             is_load_ =  false;
         }

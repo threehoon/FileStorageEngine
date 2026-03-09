@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/block_write_test.dir/example/block_write_test.cpp.o CMakeFiles/block_write_test.dir/src/file_op.cpp.o CMakeFiles/block_write_test.dir/src/index_handle.cpp.o CMakeFiles/block_write_test.dir/src/main.cpp.o CMakeFiles/block_write_test.dir/src/mmap_file.cpp.o CMakeFiles/block_write_test.dir/src/mmap_file_op.cpp.o -o ../bin/block_write_test 

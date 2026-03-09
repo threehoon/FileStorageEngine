@@ -33,8 +33,9 @@ namespace tfs{
             }
             // 文件没有打开
             fd_  = ::open( file_name_ , open_flags_, OPEN_MODE );
+            
             if( debug )
-                std::cout << "ileOperation::open_file file name:" << file_name_ << std::endl;
+                std::cout << "FleOperation::open_file file name:" << file_name_ << std::endl;
             
             if( fd_< 0 ){
                 std::cerr << "FileOperation::open file  faile. desc: "<< strerror(errno) << std::endl;
@@ -228,7 +229,12 @@ namespace tfs{
 
         int FileOperation::ftruncate_file( const int64_t lenght ){    // 将文件截断
             if(  check_file() < 0  )   return -1;
-
+            /*
+            ftruncate（ int fd , off_t lenght ）
+            把文件截断到 length 指定的大小。
+            如果文件比 length 大，多余部分会被丢弃。
+            如果文件比 length 小，会在文件末尾补零，文件大小变为 length
+            */
             if( ftruncate( fd_ , lenght ) == -1){
                 std::cerr<<"ftruncate error. error desc: "<<strerror(errno)<<std::endl;
                 return -1;
